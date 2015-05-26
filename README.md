@@ -1,6 +1,7 @@
 # moSwipe
 My own Swipe Plugin
-moSwipe detects touch gesture of touchscreen devices. Supported directions are left and right. 
+moSwipe is a jQuery Plugib which detects simple touch gesture of touchscreen devices. Currently supported directions are left and right. 
+
 <strong>Supported devices and browsers: </strong>
 - Android Stock Browser
 - Chrome
@@ -10,7 +11,7 @@ moSwipe detects touch gesture of touchscreen devices. Supported directions are l
 
 # Usage
 ```javascript
-  $('body').moSwipe({ <br/>
+  $('body').moSwipe({
     left: function(){ /**do whatever you want **/ },
     right: function(){ /**do whatever you want **/ },
   });
