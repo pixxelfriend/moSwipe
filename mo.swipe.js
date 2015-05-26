@@ -1,6 +1,6 @@
 /**
  * jQuery MoSwipe
- * Version: 0.1
+ * Version: 0.5
  * Copyright (c) 2015 Steffen Hoffmann
  * License: CC BY-NC-ND
  *			MoSelect von Steffen Hoffamnn steht unter einer
