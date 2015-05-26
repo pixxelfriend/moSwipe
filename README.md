@@ -1,7 +1,8 @@
 # moSwipe
 My Own Swipe Plugin
 
-$('body').moSwipe({
-  left: function(){ /**do whatever you want **/ },
-  right: function(){ /**do whatever you want **/ },
-});
+# Usage
+$('body').moSwipe({ <br/>
+  left: function(){ /**do whatever you want **/ },<br/>
+  right: function(){ /**do whatever you want **/ },<br/>
+});<br/>
