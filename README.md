@@ -9,9 +9,11 @@ moSwipe detects touch gesture of touchscreen devices. Supported directions are l
 - Windows based smartphones
 
 # Usage
-$('body').moSwipe({ <br/>
-  left: function(){ /**do whatever you want **/ },<br/>
-  right: function(){ /**do whatever you want **/ },<br/>
-});
+```javascript
+  $('body').moSwipe({ <br/>
+    left: function(){ /**do whatever you want **/ },
+    right: function(){ /**do whatever you want **/ },
+  });
+```
 # Known Issues
 - Currently no support for Internet Explorer on Windows based tablets.
