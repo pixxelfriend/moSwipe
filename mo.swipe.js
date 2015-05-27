@@ -36,18 +36,19 @@
 	$.fn.moSwipe = function(callOptions) {
 		var ele = $(this);
 		if (ele.length > 0) {
-			var moSwipeOptions = $.extend({
+			var options = $.extend({
 				left: false,
 				right: false,
-
+				ignore: false //jQuery Object
 			}, callOptions),
-			touchEnd = function( direction ) {
+			touchEnd = function( direction,e ) {
+				if(options.ignore && $('.ignSwipe').find(e.target).length > 0){ return false; }
 				switch(direction){
 					case 'left':
-						if(moSwipeOptions.left)	moSwipeOptions.left();
+						if(options.left) options.left();
 						break;
 					case 'right':
-						if(moSwipeOptions.right) moSwipeOptions.right();
+						if(options.right) options.right();
 						break;
 				}
 			},
@@ -97,11 +98,15 @@
 			.on( 'touchend touchcancel pointerup pointercancel MSPointerUp MSPointerCancel mouseup', function( e )
 			{
 				if( !wasTouched( e.originalEvent ) ) return true;
+
 				if( Math.abs( swipeDiffX ) > 80 )
 				{
-					 touchEnd(swipeDiffX < 0 ? 'right' : 'left' );
+					 touchEnd(swipeDiffX < 0 ? 'right' : 'left',e );
 				}
 			});
+			if(options.ignore){
+				options.ignore.addClass('ignSwipe');
+			}
 		}
 	}
 })( jQuery, window, document );
